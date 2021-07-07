@@ -1,0 +1,26 @@
+extends base.pug
+
+block content
+    h1.content-title#login-title.display-2.text-center.my-4 Login 👾
+
+    if messageDanger
+        #login-messageDanger.messageDanger.alert.alert-danger.rounded-pill.mx-5= messageDanger
+    if messageSuccess
+        #register-messageSuccess.messageSuccess.alert.alert-success.rounded-pill.mx-5= messageSuccess
+
+    form#login-form.d-flex.flex-column.align-items-center.my-5(method='POST' action='/login')
+        input.form-input#login-form__username.form-control.form-control-lg.mx-4.my-3.py-3.rounded-pill(
+            type='text' 
+            name='login_username' 
+            required 
+            placeholder='Username')
+        input.form-input#login-form__password.form-control.form-control-lg.mx-4.my-3.py-3.rounded-pill(
+            type='password' 
+            name='login_password' 
+            required
+            placeholder='Password')
+        button.form-btn#login-form__submit.btn.btn-primary.rounded-pill.mt-4.py-2.px-5(type='submit') Submit
+
+    .redirect_register.text-center
+        | Don't have an account yet? 
+        a(href='/register') Register now

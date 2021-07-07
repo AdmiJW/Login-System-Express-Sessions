@@ -1,0 +1,31 @@
+extends base.pug
+
+block additionalHeader
+    script(src='/public/script/profile.js' defer)
+
+block content
+    if messageDanger
+        #profile-messageDanger.messageDanger.alert.alert-danger.rounded-pill.mx-5= messageDanger
+    if messageWarning
+        #profile-messageWarning.messageWarning.alert.alert-warning.rounded-pill.mx-5= messageWarning
+    if messageSuccess
+        #profile-messageSuccess.messageSuccess.alert.alert-success.rounded-pill.mx-5= messageSuccess
+
+    #profile.d-flex.align-items-center.px-4
+        img#profile__avatar(src=profileAvatar alt="profile picture")
+        #profile__detail.d-flex.flex-column.justify-content-around
+            strong#profile__username.my-2= username
+            p#profile__status.lead= status
+
+    form#profile__chgProfilePic.input-group.my-5.px-4
+        label.form-label.visually-hidden(for='formFile') Change profile picture
+        input.form-control.form-control-lg#formFile(type='file' name='profile__chgProfilePic' accept='image/*')
+        button#profile_chgProfilePic__submit.btn.btn-primary.py-3(type='submit' name='profile__chgProfilePic_submit') Change Profile Picture
+
+    form#profile__chgStatus.input-group.my-5.px-4
+        label.form-label.visually-hidden(for='change_status') Change status
+        input.form-control#change_status(type='text' name='profile__chgStatus')
+        button#profile_chgStatus__submit.btn.btn-primary.py-3(type='submit') Change status
+
+    #profile__logout.text-center.mt-5
+        a.btn.btn-primary.form-btn.rounded-pill.px-4.py-2(href='/logout') Logout

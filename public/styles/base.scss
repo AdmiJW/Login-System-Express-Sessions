@@ -1,0 +1,115 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    background-color: #ecf0f1;
+    background-image: url('/public/image/6308.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#content {
+    width: unquote('min(90vw, 500px)');
+    
+    background: rgba(255, 255, 255, 0.144);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    border-radius: 30px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.content-title {
+    font-size: 4.3rem;
+}
+
+.form-input {
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+.form-btn {
+    font-size: 2rem;
+}
+
+.messageDanger, .messageSuccess, .messageWarning {
+    font-size: 1.5rem;
+    text-align: center;  
+}
+
+//===================================
+//  Login / Register Page Specific
+//===================================
+.redirect_register, .redirect_login {
+    font-size: 1.5rem;
+}
+
+
+//===================================
+//  Profile page specific
+//===================================
+// #profile.d-flex.align-items-center.px-4
+// #profile__avatar
+// #profile__detail.d-flex.flex-column.justify-content-around
+//     strong#profile__username.my-2= username
+//     p#profile__status.lead= status
+
+// form#profile__chgProfilePic.input-group.my-3.px-3
+// label.form-label.visually-hidden(for='formFile') Change profile picture
+// input.form-control.form-control-lg#formFile(type='file' name='profile__chgProfilePic' accept='image/**/')
+// button#profile_chgProfilePic__submit.btn.btn-primary(type='submit' name='profile__chgProfilePic_submit') Change Profile Picture
+
+// form#profile__chgStatus.input-group.my-3.px-3
+// label.form-label.visually-hidden(for='change_status') Change status
+// input.form-control#change_status(type='text' name='profile__chgStatus')
+// button#profile_chgStatus__submit.btn.btn-primary(type='submit' name='profile__chgStatus_submit') Change status
+
+// #profile__logout.text-center.mt-5
+// a.btn.btn-outline-primary.form-btn.rounded-pill.px-4.py-2(href='/logout') Logout
+#profile__avatar {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-position: center;
+    object-fit: cover;
+}
+
+#profile__username {
+    font-size: 3rem;
+}
+
+#profile__status {
+    font-size: 1.5rem;
+}
+
+#profile__chgProfilePic, #profile__chgStatus {
+    button[type='submit'] {
+        font-size: 1.4rem;
+    }
+}
+
+
+// Attribute link
+.attribute-link {
+    position: fixed;
+    bottom: 0; left: 0;
+    z-index: -1;
+}

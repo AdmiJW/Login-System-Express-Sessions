@@ -1,0 +1,36 @@
+extends base.pug
+
+block additionalHeader
+    script(src='/public/script/register.js' defer)
+
+block content
+    h1.content-title#register-title.display-2.text-center.my-4 Register 🌱
+
+    if messageDanger
+        #register-messageDanger.messageDanger.alert.alert-danger.rounded-pill.mx-5= messageDanger
+    if messageWarning
+        #register-messageWarning.messageWarning.alert.alert-warning.rounded-pill.mx-5= messageWarning
+    if messageSuccess
+        #register-messageSuccess.messageSuccess.alert.alert-success.rounded-pill.mx-5= messageSuccess
+
+    form#register-form.d-flex.flex-column.align-items-center.my-5(method='POST' action='/register')
+        input.form-input#register-form__username.form-control.form-control-lg.mx-4.my-3.py-3.rounded-pill(
+            type='text' 
+            name='register_username' 
+            required 
+            placeholder='Username')
+        input.form-input#register-form__password.form-control.form-control-lg.mx-4.my-3.py-3.rounded-pill(
+            type='password' 
+            name='register_password' 
+            required
+            placeholder='Password')
+        input.form-input#register-form__confirm-password.form-control.form-control-lg.mx-4.my-3.py-3.rounded-pill(
+            type='password' 
+            name='register_confirm_password' 
+            required
+            placeholder='Confirm password')
+        button.form-btn#register-form__submit.btn.btn-primary.rounded-pill.mt-4.py-2.px-5(type='submit') Register
+
+    .redirect_login.text-center
+        | Already have an account? 
+        a(href='/login') Login

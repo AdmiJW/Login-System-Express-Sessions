@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #ecf0f1;
+  background-image: url("/public/image/6308.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#content {
+  width: min(90vw, 500px);
+  background: rgba(255, 255, 255, 0.144);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.content-title {
+  font-size: 4.3rem;
+}
+
+.form-input {
+  width: 90%;
+  font-size: 1.5rem;
+}
+
+.form-btn {
+  font-size: 2rem;
+}
+
+.messageDanger, .messageSuccess, .messageWarning {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.redirect_register, .redirect_login {
+  font-size: 1.5rem;
+}
+
+#profile__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#profile__username {
+  font-size: 3rem;
+}
+
+#profile__status {
+  font-size: 1.5rem;
+}
+
+#profile__chgProfilePic button[type='submit'], #profile__chgStatus button[type='submit'] {
+  font-size: 1.4rem;
+}
+
+.attribute-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+/*# sourceMappingURL=base.css.map */
